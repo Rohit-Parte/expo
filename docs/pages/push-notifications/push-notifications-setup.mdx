@@ -94,7 +94,7 @@ async function registerForPushNotificationsAsync() {
     alert('Must use physical device for Push Notifications');
   }
 
-  /* @info On Android, you need to specify a channel. */
+  /* @info On Android, specify channel if you're going to use channelId, if added this code then its mandatory to add channelId in request else notification will not pop-up */
   if (Platform.OS === 'android') {
     Notifications.setNotificationChannelAsync('default', {
       name: 'default',
